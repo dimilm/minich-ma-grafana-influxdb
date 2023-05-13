@@ -15,17 +15,16 @@ To start the app:
 1. Run the following command from the root of the cloned repo:
 
 ```
-docker-compose up -d
-```
 
-Test
+docker compose up -d
+```
 
 To stop the app:
 
 1. Run the following command from the root of the cloned repo:
 
 ```
-docker-compose down
+docker compose down
 ```
 
 ## Ports
