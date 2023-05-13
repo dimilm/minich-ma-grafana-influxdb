@@ -5,7 +5,6 @@ Multi-container Docker app built from the following services:
 * [InfluxDB](https://github.com/influxdata/influxdb) - time series database
 * [Grafana](https://github.com/grafana/grafana) - visualization UI for InfluxDB
 
-Useful for quickly setting up a monitoring stack for performance testing. Combine with [serverless-artillery](https://github.com/Nordstrom/serverless-artillery) and [artillery-plugin-influxdb](https://github.com/Nordstrom/artillery-plugin-influxdb) to create a performance testing environment in minutes.
 
 ## Quick Start
 
