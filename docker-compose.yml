@@ -37,7 +37,7 @@ services:
     depends_on:
       - influxdb
     command: >
-      bash -c "grafana-server --homepath=/usr/share/grafana && sleep 10 && curl -X POST 'http://${GRAFANA_USERNAME}:${GRAFANA_PASSWORD}@localhost:3000/api/datasources' -H 'Content-Type: application/json' -d '{\"name\":\"InfluxDB\",\"type\":\"influxdb\",\"access\":\"proxy\",\"url\":\"http://influxdb:8086\",\"database\":\"${INFLUXDB_DB}\",\"user\":\"${INFLUXDB_USER}\",\"password\":\"${INFLUXDB_USER_PASSWORD}\",\"jsonData\":{\"timeInterval\":\"5s\",\"timeField\":\"time\",\"version\":\"Flux\"},\"secureJsonData\":{}}' && sleep 10 && curl -X POST 'http://${GRAFANA_ADMIN_USER}:${GRAFANA_ADMIN_PASSWORD}@localhost:3000/api/dashboards/db' -H 'Content-Type: application/json' -d @/grafana-dashboard.json"
+      bash -c "grafana-server --homepath=/usr/share/grafana && sleep 10 && curl -X POST 'http://${GRAFANA_USERNAME}:${GRAFANA_PASSWORD}@localhost:3000/api/datasources' -H 'Content-Type: application/json' -d '{\"name\":\"InfluxDB\",\"type\":\"influxdb\",\"access\":\"proxy\",\"url\":\"http://influxdb:8086\",\"database\":\"${INFLUXDB_DB}\",\"user\":\"${INFLUXDB_USER}\",\"password\":\"${INFLUXDB_USER_PASSWORD}\",\"jsonData\":{\"timeInterval\":\"5s\",\"timeField\":\"time\",\"version\":\"Flux\"},\"secureJsonData\":{}}' && sleep 10 && curl -X POST 'http://${GRAFANA_USERNAME}:${GRAFANA_PASSWORD}@localhost:3000/api/dashboards/db' -H 'Content-Type: application/json' -d @/grafana-dashboard.json"
   
     environment:
       - GF_SECURITY_ADMIN_USER=${GRAFANA_USERNAME}
