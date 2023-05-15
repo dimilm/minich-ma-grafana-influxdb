@@ -47,7 +47,7 @@ services:
       - GF_DATABASE_NAME=${INFLUXDB_DB}
       - GF_DATABASE_USER=${INFLUXDB_USER}
       - GF_DATABASE_PASSWORD=${INFLUXDB_USER_PASSWORD}
-      - GF_DATABASE_URL=http://influxdb:8086
+    #  - GF_DATABASE_URL=http://influxdb:8086
 
       
 networks:
