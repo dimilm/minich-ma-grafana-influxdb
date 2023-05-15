@@ -32,7 +32,7 @@ services:
     networks:
       - iot
     volumes:
-      - grafana-data:/var/lib/grafana
+      - grafana_data:/var/lib/grafana
       - ./grafana-provisioning/:/etc/grafana/provisioning
     depends_on:
       - influxdb
@@ -46,6 +46,6 @@ networks:
   iot:
 
 volumes:
-  influxdb-data:
-  influxdb-config:
-  grafana-data:
+  influxdb_data:
+  influxdb_config:
+  grafana_data:
